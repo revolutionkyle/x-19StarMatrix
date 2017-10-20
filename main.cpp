@@ -6,9 +6,8 @@ int main()
 {int inrows;
  int incols;
  vector< vector<char> > starMatrix;
- cout << "Please enter a number of rows." << endl;
+ cout << "Enter rows and columns." << endl;
  cin >> inrows;
- cout << "Please enter a number of columns." << endl;
  cin >> incols;
 
  if(inrows <=0 || incols <= 0)
