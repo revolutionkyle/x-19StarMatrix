@@ -11,15 +11,15 @@ int main()
  cin >> incols;
 
  if(inrows <=0 || incols <= 0)
- { cout << endl;
+ {
  }
  else if(inrows > 0 && incols > 0)
  { starMatrix.resize(inrows);
    for(int k = 0; k<starMatrix.size(); k++)
-   { starMatrix[k].resize(incols);
+   { starMatrix[k].resize(incols+1);
    }
    for(int r = 0; r<starMatrix.size(); r++)
-   {    for(int s=0;s < starMatrix.size(); s++)
+   {    for(int s=0;s < starMatrix.size()+1; s++)
         { starMatrix[r][s] = '*';
         }
    }
