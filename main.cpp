@@ -3,32 +3,38 @@
 #include<string>
 using namespace std;
 int main()
-{int inrows;
- int incols;
- vector< vector<char> > starMatrix;
- cout << "Enter rows and columns of stars:" << endl;
- cin >> inrows;
- cin >> incols;
+{
+        int inrows;
+        int incols;
+        vector< vector<char> > starMatrix;
+        cout << "Enter rows and columns of stars:" << endl;
+        cin >> inrows;
+        cin >> incols;
 
- if(inrows <=0 || incols <= 0)
- {
- }
- else if(inrows > 0 && incols > 0)
- { starMatrix.resize(inrows);
-   for(int k = 0; k<starMatrix.size(); k++)
-   { starMatrix[k].resize(incols+1);
-   }
-   for(int r = 0; r<starMatrix.size(); r++)
-   {    for(int s=0;s < starMatrix.size()+1; s++)
-        { starMatrix[r][s] = '*';
+        if(inrows <=0 || incols <= 0)
+        {
         }
-   }
-   for(int l=0;l<starMatrix.size();l++)
-   {    for(int k=0;k<starMatrix[l].size();k++)
-        { cout << starMatrix[l][k];  
+        else if(inrows > 0 && incols > 0)
+        { 
+            starMatrix.resize(inrows);
+                for(int k = 0; k<starMatrix.size(); k++)
+                { 
+                    starMatrix[k].resize(incols);
+                }
+                for(int r = 0; r<starMatrix.size(); r++)
+                {  
+                        for(int s=0;s < starMatrix[r].size(); s++)
+                        { 
+                            starMatrix[r][s] = '*';
+                        }
+                }
+                for(int l=0;l<starMatrix.size();l++)
+                {    for(int k=0;k<starMatrix[l].size();k++)
+                        { 
+                            cout << starMatrix[l][k];  
+                        }
+                        cout << endl;
+                }
         }
-        cout << endl;
-   }
- }
-return 0;
+        return 0;
 }
