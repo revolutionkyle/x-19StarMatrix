@@ -6,7 +6,7 @@ int main()
 {int inrows;
  int incols;
  vector< vector<char> > starMatrix;
- cout << "Enter rows and columns." << endl;
+ cout << "Enter rows and columns of stars:" << endl;
  cin >> inrows;
  cin >> incols;
 
